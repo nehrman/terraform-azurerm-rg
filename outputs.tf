@@ -1,6 +1,11 @@
-output "resource_group_name" {
+output "resource_group_id" {
   description = "name of resource group"
   value       = "${azurerm_resource_group.rg.id}"
+}
+
+output "resource_group_name" {
+  description = "name of resource group"
+  value       = "${azurerm_resource_group.rg.name}"
 }
 
 output "virtual_network_name" {
