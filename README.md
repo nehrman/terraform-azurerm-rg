@@ -1,4 +1,4 @@
-# Azure Virtual Machine Module
+# Azure Resource Group Module
 
 A Terraform module which creates Resource Group on Azure with the following characteristics:
 - Create Virtual Network
