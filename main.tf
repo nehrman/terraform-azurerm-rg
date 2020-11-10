@@ -1,6 +1,6 @@
 # This module will create a resource group and all basic resources like :
-# - Virtual Network 
-# - Subnet 
+# - Virtual Network
+# - Subnet
 # - Storage Account (when needed)
 
 # Create Resource Group
@@ -8,6 +8,10 @@ resource "azurerm_resource_group" "rg" {
   name     = "${var.tf_az_env}-${var.tf_az_name}-rg"
   location = "${var.tf_az_location}"
   tags     = "${var.tf_az_tags}"
+
+  lifecycle {
+    create_before_destroy = true
+  }
 }
 
 # Create Virtual Network in the Resource Group
