@@ -29,7 +29,7 @@ resource "azurerm_subnet" "subnet" {
   name                 = "${var.tf_az_env}-${var.tf_az_name}-${var.tf_az_subnet_names[count.index]}"
   virtual_network_name = azurerm_virtual_network.net.name
   resource_group_name  = azurerm_resource_group.rg.name
-  address_prefixes     = var.tf_az_subnet_prefixes[count.index]
+  address_prefixes     = [var.tf_az_subnet_prefixes[count.index]]
   count                = length(var.tf_az_subnet_names)
 }
 
