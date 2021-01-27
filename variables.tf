@@ -18,16 +18,19 @@ variable "tf_az_net_addr_space" {
 # If no values specified, this defaults to Azure DNS 
 variable "tf_az_dns_servers" {
   description = "The DNS servers to be used with vNet."
+  type        = list(string)
   default     = []
 }
 
 variable "tf_az_subnet_prefixes" {
   description = "The address prefix to use for the subnet."
+  type        = list(string)
   default     = ["10.0.1.0/24"]
 }
 
 variable "tf_az_subnet_names" {
   description = "A list of public subnets inside the vNet."
+  type        = list(string)
   default     = ["subnet1"]
 }
 
