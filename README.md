@@ -7,7 +7,7 @@ A Terraform module which creates Resource Group on Azure with the following char
 
 ## Terraform versions
 
-Support of Terraform 0.12 is not yet implemented.
+If you are using Terraform 0.12 you can use versions `v2.*`.
 
 If you are using Terraform 0.11 you can use versions `v1.*`.
 
