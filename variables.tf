@@ -47,5 +47,6 @@ variable "tf_az_storage_account_repl" {
 
 variable "tf_az_tags" {
   description = "The tags to associate with your network and subnets."
-  type        = "map"
+  type        = map(string)
 }
+
